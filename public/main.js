@@ -20,7 +20,7 @@ const rootHtml = document.documentElement;
 // ---------- Three.js core ----------
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#ffc6a8'); // light pink/orange
-scene.fog = new THREE.FogExp2(0xffc6a8, 0.015);
+scene.fog = new THREE.FogExp2(0xe6eef6, 0.015); // neutral fog so buildings don't tint orange
 
 const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 2000);
 camera.position.set(0, 1.65, 8);
@@ -234,9 +234,9 @@ const CONFIG = {
 function lerp(a,b,t){ return a + (b-a)*t; }
 
 function rebuildWorld() {
-  // Sky color
+  // Sky color (fog stays neutral to avoid orange tint on buildings)
   scene.background = new THREE.Color(CONFIG.sky);
-  scene.fog.color = new THREE.Color(CONFIG.sky);
+  scene.fog.color = new THREE.Color('#e6eef6');
   scene.fog.density = CONFIG.fog;
   ambient.intensity = CONFIG.ambient;
   keyLight.intensity = CONFIG.sun;
