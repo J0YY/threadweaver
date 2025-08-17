@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Threadweaver</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="theme-color" content="#0b1020" />
+  </head>
+  <body>
+    <div id="scene"></div>
+
+    <div id="startOverlay">
+      <div class="panel">
+        <h1>Threadweaver</h1>
+        <p>Compose a living city. Paint the sky. Talk to NPCs. Learn their story as though it mattered. Wander the vibe.</p>
+        <p style="opacity:.8;margin-top:6px;">WASD to move · Space to jump · Mouse to look</p>
+        <button id="startBtn">Enter</button>
+      </div>
+    </div>
+
+    <div id="reticle"></div>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle settings">⚙︎</button>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="row">
+        <label>Sky</label>
+        <input id="uiSky" type="color" value="#0b1020" />
+      </div>
+      <div class="row">
+        <label>City ⇄ Nature</label>
+        <input id="uiMix" type="range" min="0" max="1" step="0.01" value="0.5" />
+      </div>
+      <div class="row">
+        <label>Buildings</label>
+        <input id="uiBuildings" type="range" min="0" max="1" step="0.01" value="0.55" />
+      </div>
+      <div class="row">
+        <label>Trees</label>
+        <input id="uiTrees" type="range" min="0" max="1" step="0.01" value="0.8" />
+      </div>
+      <div class="row">
+        <label>People</label>
+        <input id="uiPeople" type="range" min="0" max="1" step="0.01" value="0.6" />
+      </div>
+      <div class="row">
+        <label>Cars</label>
+        <input id="uiCars" type="range" min="0" max="1" step="0.01" value="0.5" />
+      </div>
+      <div class="row">
+        <label>Fog</label>
+        <input id="uiFog" type="range" min="0" max="0.08" step="0.001" value="0.02" />
+      </div>
+      <div class="row">
+        <label>Ambient</label>
+        <input id="uiAmbient" type="range" min="0" max="1" step="0.01" value="0.4" />
+      </div>
+      <div class="row">
+        <label>Sun</label>
+        <input id="uiSun" type="range" min="0" max="1.2" step="0.01" value="0.8" />
+      </div>
+      <div class="row">
+        <label>Accent</label>
+        <input id="uiAccent" type="color" value="#37b7ff" />
+      </div>
+      <div class="row">
+        <label>Streetlights</label>
+        <input id="uiLights" type="range" min="0" max="1" step="0.01" value="0.8" />
+      </div>
+      <div class="row">
+        <label>Road spacing</label>
+        <input id="uiRoad" type="range" min="0" max="1" step="0.01" value="0.4" />
+      </div>
+      <div class="row">
+        <label>World size</label>
+        <input id="uiWorld" type="range" min="0" max="1" step="0.01" value="0.5" />
+      </div>
+    </aside>
+
+    <div id="chatHint" class="chat-hint" style="display:none;">Press E to chat</div>
+
+    <div id="chatOverlay" class="chat-modal" style="display:none;">
+      <div class="chat-card">
+        <div class="chat-header">
+          <h3 id="chatName">Chat</h3>
+          <button id="chatClose">×</button>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <div class="chat-form">
+          <input id="chatText" type="text" placeholder="Say something..." />
+          <button id="chatSend">Send</button>
+        </div>
+      </div>
+    </div>
+    <div id="chatModal" class="chat-modal" style="display:none;">
+      <div class="chat-card">
+        <div class="chat-header">
+          <span id="chatTitle">Chat</span>
+          <button id="chatClose">×</button>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="Say something..." autocomplete="off" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <noscript>
+      <div style="color: #fff; text-align:center; margin-top:2rem;">
+        This experience requires JavaScript and a WebGL-enabled browser.
+      </div>
+    </noscript>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/",
+          "cannon-es": "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js"
+        }
+      }
+    </script>
+    <script type="module" src="/main.js"></script>
+  </body>
+  </html>
+
+
