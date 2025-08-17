@@ -19,8 +19,8 @@ const rootHtml = document.documentElement;
 
 // ---------- Three.js core ----------
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#ff8a6a');
-scene.fog = new THREE.FogExp2(0xff8a6a, 0.02);
+scene.background = new THREE.Color('#ffc6a8'); // light pink/orange
+scene.fog = new THREE.FogExp2(0xffc6a8, 0.015);
 
 const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 2000);
 camera.position.set(0, 1.65, 8);
@@ -216,7 +216,7 @@ spawnAnimals(20);
 
 // Live config and rebuild
 const CONFIG = {
-  sky: '#ff8a6a',
+  sky: '#ffc6a8',
   mix: 0.5,
   buildings: 0.55,
   trees: 0.8,
