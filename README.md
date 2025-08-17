@@ -3,10 +3,6 @@
 Compose a living city. Paint the sky. Talk to NPCs. Learn their story as though it mattered. Wander the vibe.
 
 ---
-<img width="1470" height="956" alt="Screenshot 2025-08-16 at 6 33 22 PM" src="https://github.com/user-attachments/assets/dd0f1acb-cbe9-4649-b8a7-a0b8f3a03cec" />
-<img width="1468" height="739" alt="Screenshot 2025-08-16 at 6 32 23 PM" src="https://github.com/user-attachments/assets/3e9aa9ba-39f6-45af-b2d3-050fcbc3de36" />
-
----
 ## Why this exists
 
 Threadweaver is a tiny love‑letter to the characters games overlook. “NPC” started as a design term (non‑player character) but—let’s be honest—Gen Z slang sometimes uses “NPC” to mean background people, low‑key irrelevant, just vibing on autopilot. Threadweaver flips that. Here, the city is woven from those background lives. Gossip matters. Rent is late. Someone’s planning a speakeasy. You listen, tease, solve a riddle, and a life moves one step.
@@ -26,6 +22,11 @@ Threadweaver is a tiny love‑letter to the characters games overlook. “NPC”
   - Replies stay concise (1–2 lines), unpredictable in tone, and occasionally end with a tiny hook/riddle
   - Small arc progression each turn (in‑memory)
 - Real‑time chat via OpenAI Responses API (not Chat Completions)
+
+---
+<img width="1470" height="956" alt="Screenshot 2025-08-16 at 6 33 22 PM" src="https://github.com/user-attachments/assets/dd0f1acb-cbe9-4649-b8a7-a0b8f3a03cec" />
+<img width="1468" height="739" alt="Screenshot 2025-08-16 at 6 32 23 PM" src="https://github.com/user-attachments/assets/3e9aa9ba-39f6-45af-b2d3-050fcbc3de36" />
+---
 
 ## Quickstart
 
